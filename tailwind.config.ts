@@ -19,7 +19,7 @@ const config: Config = {
         border: "#2c2f40",
         highlight: "#444267",
         text_side: "#53587d",
-
+        purple: "#ab47bc",
       },
     },
   },
