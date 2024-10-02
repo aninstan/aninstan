@@ -3,7 +3,13 @@ import React from 'react';
 
 
 
-export default function Sidebar({ showElement1, showElement2, visibleElement }) {
+interface SidebarProps {
+    showElement1: () => void;
+    showElement2: () => void;
+    visibleElement: number;
+}
+
+export default function Sidebar({ showElement1, showElement2, visibleElement }: SidebarProps) {
     
     return (
         <div className="h-[35px] w-[100%] bg-bg_light flex flex-row border-b-[1px] border-border">
