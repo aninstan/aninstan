@@ -48,7 +48,31 @@ export default function Home() {
             <div className="font-mono text-[1rem] text-white p-3">
               <p className="text-cyan-300"># About Me</p>
                 <p>I&apos;m Anine Standnes, a first year data science student at NTNU.</p>
-              <br />
+            </div>
+          </div>
+
+          <div className={` text-[1rem] text-text_side p-1 toggle-element ${visibleElement === 2 ? '' : 'hidden'}`}>
+            <Breadcrumb className="">
+              <Breadcrumb.Item href="#" className="hover:text-blue-300">src</Breadcrumb.Item>
+              <Breadcrumb.Item href="#">docs</Breadcrumb.Item>
+              <Breadcrumb.Item href="#">contact.md</Breadcrumb.Item>
+            </Breadcrumb>
+          </div>
+        </div>
+        <div className="flex flex-col w-[100%]">
+          <Topbar 
+          showElement1={showElement1} 
+          showElement2={showElement2} 
+          visibleElement={visibleElement}
+          />
+
+          <div className={`text-[0.7rem] text-text_side p-1 border-l-border border-l-[1px]`}>
+            <Breadcrumb className="">
+              <Breadcrumb.Item href="#" className="hover:text-blue-300">src</Breadcrumb.Item>
+              <Breadcrumb.Item href="#">docs</Breadcrumb.Item>
+              <Breadcrumb.Item href="#">subjects.md</Breadcrumb.Item>
+            </Breadcrumb>
+            <div className="font-mono text-[1rem] text-white p-3 h-[92vh]">
               <p className="text-cyan-300">## My Current Subjects</p>
               <p>INFT1003 - Web Technology and Teamwork</p>
               <p>INFT1004 - Economics and Accounting</p>
@@ -65,16 +89,7 @@ export default function Home() {
               <p>IMAT1002 - Enginerering Mathematics 1</p>
             </div>
           </div>
-
-          <div className={` text-[1rem] text-text_side p-1 toggle-element ${visibleElement === 2 ? '' : 'hidden'}`}>
-            <Breadcrumb className="">
-              <Breadcrumb.Item href="#" className="hover:text-blue-300">src</Breadcrumb.Item>
-              <Breadcrumb.Item href="#">docs</Breadcrumb.Item>
-              <Breadcrumb.Item href="#">contact.md</Breadcrumb.Item>
-            </Breadcrumb>
-          </div>
         </div>
-
       </div>
     </>
   );
